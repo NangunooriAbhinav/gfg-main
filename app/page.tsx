@@ -1,9 +1,9 @@
 "use client";
 import Head from 'next/head';
-import Section from './components/Section';
-import SwiperCarousel from './components/SwiperCarousel';
-import Loader from './components/Loader';
-import Header from './components/header';
+import Team from './components/Team';
+import Social from './components/Social';
+import Hero from './components/Hero';
+import Events from './components/Events';
 
 export default function Home() {
   return (
@@ -15,16 +15,11 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
 
-      <Loader/>
-      <Header />
-
       <main >
-        <Section id="about-us-loc" title="About Us" description="Welcome to the GFG Student Chapter at AU!" />
-        <Section id="vision-loc" title="Vision" description="Our vision at GFG is..." />
-        <Section id="mission-loc" title="Mission" description="Our mission at GFG is..." />
-        <Section id="objectives-loc" title="Objectives" description="1. Knowledge Sharing..." />
-        <Section id="advantages-loc" title="Advantages" description="Get internships, learn to build solutions..." />
-        <SwiperCarousel />
+        <Hero />
+        <Events />
+        <Team />
+        <Social />
       </main>
     </>
   );
