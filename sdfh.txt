@@ -1,0 +1,240 @@
+    <section id="team-loc" class="section-body">
+        <div>
+            <div class="our-team-head" data-aos="fade-down"><span>Our</span> Core Team</div>
+
+            <div class="team-members" data-aos="fade-up">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/chaiperson.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Varun Talluri</h3>
+                        <h4 class="title">Chairperson (2023)</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/talluri-varun-baaa0b236"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com/Varun-Talluri" class="fa fa-github"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/TALLURI__VARUN?t=T-q56355pofjQb19gUfh9g&s=09"
+                                class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com" class="fa fa-instagram"
+                                aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/vicechaiperson.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Sriraj Nihar</h3>
+                        <h4 class="title">Vice Chairperson</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/sriraj-nihar" class="fa fa-linkedin"
+                                aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com/Nxhar" class="fa fa-github"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/sriraj_nihar_s" class="fa fa-twitter"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://instagram.com/s._.nihar._.s?igshid=MzRlODBiNWFlZA=="
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/secretary.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Yerram Vikanth</h3>
+                        <h4 class="title">Secretary</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/vikanth-yerram-0435a7269"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com/Vikanth7" class="fa fa-github"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/Vikanth7?t=wMBiqUVkrasKx72TsNnhbA&s=09"
+                                class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" target="_blank"
+                                href="https://instagram.com/vikanth7?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/DEVATHA JAYANTH MACHINENI.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Devatha Jayanth Machineni</h3>
+                        <h4 class="title">Treasurer</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/devatha-jayanth-machineni-9038b7243"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com" class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://instagram.com/__jayanthchowdary__?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/teachnicalteamlead.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Puligilla Sai Nithin</h3>
+                        <h4 class="title">Technical Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/sai-puligilla-a6ba5422a"
+                                class="fa fa-linkedin" aria-hidden="true"></a></litarget="_blank">
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/SaiPuligilla1?t=k7M__Luezt90ZNhXJA2_RA&s=08"
+                                class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://instagram.com/sainithin_08?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/Brinda Reddy Kuncharam.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Brinda Reddy Kuncharam</h3>
+                        <h4 class="title">Organizing Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com" class="fa fa-linkedin"
+                                aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com" class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com" class="fa fa-instagram"
+                                aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/KALYAN CHAKRAVARTHI.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Kalyan Chakravarthi</h3>
+                        <h4 class="title">Design Team Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/bandaru-kalyan-chakravarthi-754b78268"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com" class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.instagram.com" class="fa fa-instagram"
+                                aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/DHRUV LUNAWATH.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Dhruv Lunawath</h3>
+                        <h4 class="title">Social Media Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/dhruv-lunawath-544211269"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com/Dhruvlunawath" class="fa fa-github"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/DhruvLunawath" class="fa fa-twitter"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://instagram.com/dhruv_lunawath?igshid=OGQ5ZDc2ODk2ZA=="
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/BURRA RAAGA SAMANVITA.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Burra Raaga Samanvita</h3>
+                        <h4 class="title">Public Relations Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/raaga-samanvita-483094247"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com" class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://instagram.com/raaga_74?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/CHANDRAGIRI JAYA SHANKAR.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Chandragiri Jaya Shankar</h3>
+                        <h4 class="title">Hospitality Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/chandragiri-jaya-shankar-590464269"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com" class="fa fa-github" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/Jay_14367?t=8KP79ZzV2C5bAhqM98MDyQ&s=08"
+                                class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://instagram.com/jayashankar_ch?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"
+                                class="fa fa-instagram" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="./assets/Nukala Divyasree.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Nukala Divyasree</h3>
+                        <h4 class="title">Content Team Lead</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.linkedin.com/in/nukala-divya-sree-818260240"
+                                class="fa fa-linkedin" aria-hidden="true"></a></li>
+                        <li><a target="_blank" href="https://github.com/Divya-Sree123" class="fa fa-github"
+                                aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com" class="fa fa-twitter" aria-hidden="true"></a>
+                        </li>
+                        <li><a target="_blank" href="https://instagram.com" class="fa fa-instagram"
+                                aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
