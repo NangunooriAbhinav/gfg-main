@@ -270,23 +270,24 @@ body {
   justify-content: center;
   width: 90rem;
   gap: 2vw;
+  padding-bottom: 1rem;
 }
 
-#header-text {
+/* #header-text {
   margin-top: 1.5rem;
-}
+} */
 
 #bonjour {
   color: #318d44;
   font-weight: 500;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 #welcome {
   font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 #geeksforgeeks {
@@ -297,11 +298,12 @@ body {
 #description {
   line-height: 1.5rem;
   text-align: justify;
+  padding: 1rem;
 }
 
 #header-img img {
   width: 50vw;
-  max-width: 900px;
+  max-width: 760px;
 }
 
 @media screen and (max-width: 980px) {

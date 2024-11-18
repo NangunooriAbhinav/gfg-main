@@ -3,7 +3,7 @@ export default function Hero() {
         <>
             <section id="about-us-loc" className="section-body">
                 <div id="header-wrap">
-                    <div id="header-text" data-aos="fade-up" data-aos-delay={300}>
+                    <div className="" id="header-text" data-aos="fade-up" data-aos-delay={300}>
                         <div id="bonjour">Hii, GEEKS!!</div>
                         <div id="welcome">
                             Welcome to <span id="geeksforgeeks">GeeksforGeeks</span> Student
