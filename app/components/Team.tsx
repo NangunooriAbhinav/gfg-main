@@ -11,8 +11,8 @@ export default function Team() {
                             <img className="img-fluid" src="./chaiperson.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Varun Talluri</h3>
-                            <h4 className="title">Chairperson (2023)</h4>
+                            <h3 className="name">Gaurav Kumar</h3>
+                            <h4 className="title">Chairperson (2024)</h4>
                         </div>
                         <ul className="social">
                             <li>
@@ -54,7 +54,7 @@ export default function Team() {
                             <img className="img-fluid" src="./vicechaiperson.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Sriraj Nihar</h3>
+                            <h3 className="name">Mohammed Ateeq</h3>
                             <h4 className="title">Vice Chairperson</h4>
                         </div>
                         <ul className="social">
@@ -97,7 +97,7 @@ export default function Team() {
                             <img className="img-fluid" src="./secretary.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Yerram Vikanth</h3>
+                            <h3 className="name">Sai Dheeraj</h3>
                             <h4 className="title">Secretary</h4>
                         </div>
                         <ul className="social">
@@ -139,12 +139,58 @@ export default function Team() {
                         <div className="picture">
                             <img
                                 className="img-fluid"
-                                src="./DEVATHA JAYANTH MACHINENI.png"
+                                src="./Anirudh.jpg"
                             />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Devatha Jayanth Machineni</h3>
+                            <h3 className="name">Anirudh</h3>
                             <h4 className="title">Treasurer</h4>
+                        </div>
+                        <ul className="social">
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://www.linkedin.com/in/devatha-jayanth-machineni-9038b7243"
+                                    className="fa fa-linkedin"
+                                    aria-hidden="true"
+                                />
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://github.com"
+                                    className="fa fa-github"
+                                    aria-hidden="true"
+                                />
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://twitter.com"
+                                    className="fa fa-twitter"
+                                    aria-hidden="true"
+                                />
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://instagram.com/__jayanthchowdary__?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                                    className="fa fa-instagram"
+                                    aria-hidden="true"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="our-team">
+                        <div className="picture">
+                            <img
+                                className="img-fluid"
+                                src="./Abhinav.jpeg"
+                            />
+                        </div>
+                        <div className="team-content">
+                            <h3 className="name">N. Abhinav</h3>
+                            <h4 className="title">Website and App Incharge</h4>
                         </div>
                         <ul className="social">
                             <li>
@@ -186,7 +232,7 @@ export default function Team() {
                             <img className="img-fluid" src="./teachnicalteamlead.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Puligilla Sai Nithin</h3>
+                            <h3 className="name">C. Srivatsa</h3>
                             <h4 className="title">Technical Lead</h4>
                         </div>
                         <ul className="social">
@@ -232,7 +278,7 @@ export default function Team() {
                             />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Brinda Reddy Kuncharam</h3>
+                            <h3 className="name">PVLS Datta Manas</h3>
                             <h4 className="title">Organizing Lead</h4>
                         </div>
                         <ul className="social">
@@ -275,7 +321,7 @@ export default function Team() {
                             <img className="img-fluid" src="./KALYAN CHAKRAVARTHI.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Kalyan Chakravarthi</h3>
+                            <h3 className="name">Ch Yogesh</h3>
                             <h4 className="title">Design Team Lead</h4>
                         </div>
                         <ul className="social">
@@ -315,7 +361,7 @@ export default function Team() {
                     </div>
                     <div className="our-team">
                         <div className="picture">
-                            <img className="img-fluid" src="./DHRUV LUNAWATH.png" />
+                            <img className="img-fluid" src="./Naresh.jpg" />
                         </div>
                         <div className="team-content">
                             <h3 className="name">Dhruv Lunawath</h3>
