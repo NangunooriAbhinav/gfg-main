@@ -364,7 +364,7 @@ export default function Team() {
                             <img className="img-fluid" src="./Naresh.jpg" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Dhruv Lunawath</h3>
+                            <h3 className="name">B Naresh</h3>
                             <h4 className="title">Social Media Lead</h4>
                         </div>
                         <ul className="social">
@@ -407,7 +407,7 @@ export default function Team() {
                             <img className="img-fluid" src="./BURRA RAAGA SAMANVITA.png" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Burra Raaga Samanvita</h3>
+                            <h3 className="name">Siri Parvathi</h3>
                             <h4 className="title">Public Relations Lead</h4>
                         </div>
                         <ul className="social">
@@ -453,7 +453,7 @@ export default function Team() {
                             />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Chandragiri Jaya Shankar</h3>
+                            <h3 className="name">B Likith</h3>
                             <h4 className="title">Hospitality Lead</h4>
                         </div>
                         <ul className="social">
@@ -496,7 +496,7 @@ export default function Team() {
                             <img className="img-fluid" src="./Nukala Divyasree.jpg" />
                         </div>
                         <div className="team-content">
-                            <h3 className="name">Nukala Divyasree</h3>
+                            <h3 className="name">Sumad Reddy</h3>
                             <h4 className="title">Content Team Lead</h4>
                         </div>
                         <ul className="social">
