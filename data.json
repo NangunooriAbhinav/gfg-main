@@ -1,6 +1,7 @@
 {
     "quizzes": [
       {
+        "id": "1",
         "title": "HTML",
         "icon": "/icon-html.svg",
         "iconbg": "#FFF1E9",
@@ -83,6 +84,7 @@
         ]
       },
       {
+        "id": "2",
         "title": "CSS",
         "icon": "/icon-css.svg",
         "iconbg": "#E0FDEF",

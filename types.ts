@@ -27,6 +27,7 @@
   }
 
   export type Quiz = {
+    id: string;
     title: string;
     icon: string;
     iconbg: string;
@@ -42,3 +43,8 @@
     quizId: string;   // ID of the associated quiz
   }
   
+  export interface Jwtpayload {
+    email: string;
+    exp: number;
+    uid: string;
+  }

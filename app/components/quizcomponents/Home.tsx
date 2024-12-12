@@ -1,4 +1,5 @@
 import { Quiz } from "@/types";
+import { useEffect } from "react";
 
 type HomeProps = {
   quizzes: Quiz[];
@@ -7,6 +8,10 @@ type HomeProps = {
 };
 
 const Home = ({ quizzes, setQuizData, settoggle }: HomeProps) => {
+  useEffect(() => {
+    console.log("Quizzes:", quizzes);
+  }, [quizzes]);
+
   const handleSelectedQuiz = (quiz: Quiz) => {
     setQuizData(quiz);
   };

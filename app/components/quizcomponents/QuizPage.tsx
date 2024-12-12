@@ -1,6 +1,8 @@
-import { Quiz } from "@/types";
-import { useState } from "react";
+import { Jwtpayload, Quiz } from "@/types";
+import { use, useEffect, useState } from "react";
 import ScorePage from "./ScorePage";
+import { jwtDecode } from "jwt-decode";
+import { createResponse } from "@/lib/frontend_functions";
 
 type QuizPageProps = {
   quizData: Quiz;
@@ -8,15 +10,53 @@ type QuizPageProps = {
 
 const QuizPage = ({ quizData }: QuizPageProps) => {
   const [question, setQuestion] = useState<number>(0);
-  const [progressBar, setProgressBar] = useState<number>(10);
+  const [progressBar, setProgressBar] = useState<number>(0);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [selectedAnswer, setSelectedAnswer] = useState<String | undefined>("");
   const [score, setScore] = useState<number>(0);
   const [showNextQuestion, setShowNextQuestion] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
+  const [uid, setUid] = useState<string>("");
 
   let currentQuestion = quizData.questions && quizData.questions[question];
   let numberOfQuestions = quizData.questions?.length;
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decoded = decodeJwt(token);
+      if (decoded) {
+        setUid(decoded.uid);
+      }
+    }
+  }, []);
+
+  const decodeJwt = (token: string): Jwtpayload | null => {
+    try {
+      const decoded = jwtDecode<Jwtpayload>(token);
+      return decoded;
+    } catch (error) {
+      console.error("Error decoding JWT:", error);
+      return null;
+    }
+  };
+
+  const submitQuiz = async () => {
+    try {
+      const response = await createResponse(
+        {
+          id: "",
+          userId: uid,
+          score: score,
+          quizId: quizData.id,
+        },
+        localStorage.getItem("token") || ""
+      );
+      console.log(response);
+    } catch (error) {
+      console.error("Failed to submit quiz:", error);
+    }
+  };
 
   const handleSubmit = () => {
     if (selectedAnswer === "") {
@@ -27,11 +67,17 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
       return;
     }
 
+    console.log(selectedAnswer, currentQuestion?.answer);
+
     if (selectedAnswer === currentQuestion?.answer) {
       setScore(score + 1);
     }
     setShowNextQuestion(true);
     setIsSubmitted(true);
+
+    if (question + 1 === numberOfQuestions) {
+      submitQuiz();
+    }
   };
 
   const handleSelectedAnswer = (answer: String | undefined) => {
@@ -42,7 +88,9 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
     setIsSubmitted(false);
     setSelectedAnswer("");
     setQuestion(question + 1);
-    setProgressBar(progressBar + 10);
+    setProgressBar(
+      progressBar + (numberOfQuestions ? 100 / numberOfQuestions : 10)
+    );
     setShowNextQuestion(false);
   };
 

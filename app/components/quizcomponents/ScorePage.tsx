@@ -49,12 +49,12 @@ const ScorePage = ({
             </h5>
           </div>
         </section>
-        {/* <button
+        <button
           className="hover:bg-btnHover h-14 w-full rounded-xl bg-purple py-2 text-[18px] font-medium text-white transition-all duration-200 ease-in-out sm:h-[92px] sm:rounded-3xl sm:text-[28px] xl:w-[564px]"
           onClick={() => (window.location.href = "/")}
         >
-          Play Again
-        </button> */}
+          Show LeaderBoard
+        </button>
       </div>
     </section>
   );
