@@ -21,7 +21,10 @@ const Leaderboard = () => {
           window.localStorage.getItem("token") || ""
         );
         console.log(res.data);
-        setLeaderboard(res.data.data);
+        const sortedLeaderboard = res.data.data.sort(
+          (a: UserScore, b: UserScore) => b.score - a.score
+        );
+        setLeaderboard(sortedLeaderboard);
       } catch (error) {
         console.error("Failed to fetch leaderboard:", error);
       }

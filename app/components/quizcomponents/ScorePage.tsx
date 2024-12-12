@@ -50,7 +50,7 @@ const ScorePage = ({
           </div>
         </section>
         <button
-          className="hover:bg-btnHover h-14 w-full rounded-xl bg-purple py-2 text-[18px] font-medium text-white transition-all duration-200 ease-in-out sm:h-[92px] sm:rounded-3xl sm:text-[28px] xl:w-[564px]"
+          className="hover:bg-primary-100 h-14 w-full rounded-xl bg-primary-50 py-2 text-[18px] font-medium text-white transition-all duration-200 ease-in-out sm:h-[92px] sm:rounded-3xl sm:text-[28px] xl:w-[564px]"
           onClick={() => (window.location.href = "/leaderboard")}
         >
           Show LeaderBoard

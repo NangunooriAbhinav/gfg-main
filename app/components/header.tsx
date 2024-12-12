@@ -1,7 +1,4 @@
-
 export default function Header() {
-
-
   return (
     <nav id="navbar-wrap" className="">
       <div id="navbar">
@@ -20,10 +17,9 @@ export default function Header() {
           <a href="#top-loc">About Us</a>
           <a href="#events-loc">Events</a>
           <a href="#team-loc">Team</a>
-          <a href="#social-media-loc">Social Media</a>
+          <a href="/quiz">Lethal Bytes</a>
         </div>
       </div>
     </nav>
-
   );
 }
