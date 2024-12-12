@@ -3,6 +3,7 @@ import { use, useEffect, useState } from "react";
 import ScorePage from "./ScorePage";
 import { jwtDecode } from "jwt-decode";
 import { createResponse, getUserDetails } from "@/lib/frontend_functions";
+import { get } from "https";
 
 type QuizPageProps = {
   quizData: Quiz;
@@ -52,9 +53,13 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
     }
   };
 
+  useEffect(() => {
+    if (user) {
+      submitQuiz();
+    }
+  }, [user]);
+
   const submitQuiz = async () => {
-    await getUser(uid);
-    console.log(user);
     try {
       const response = await createResponse(
         {
@@ -90,7 +95,7 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
     setIsSubmitted(true);
 
     if (question + 1 === numberOfQuestions) {
-      submitQuiz();
+      getUser(uid);
     }
   };
 

@@ -107,6 +107,19 @@ const Login = () => {
                   {isOtpSent ? "Verify OTP" : "Send OTP"}
                 </button>
               </form>
+              <div className="flex justify-center mt-4">
+                <p className="text-sm text-gray-500">
+                  Don't have an account?{" "}
+                  <button
+                    className="text-primary-600 hover:underline"
+                    onClick={() => {
+                      window.location.href = "/register";
+                    }} // Navigate to the register page
+                  >
+                    Register here
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
         </div>

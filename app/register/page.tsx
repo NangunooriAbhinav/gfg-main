@@ -1,4 +1,5 @@
 "use client";
+import { registerUser } from "@/lib/frontend_functions";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -6,7 +7,6 @@ interface FormData {
   email: string;
   year: string;
   section: string;
-  terms: boolean;
 }
 
 const Register: React.FC = () => {
@@ -15,7 +15,6 @@ const Register: React.FC = () => {
     email: "",
     year: "",
     section: "",
-    terms: false,
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -26,10 +25,30 @@ const Register: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Perform form submission logic, e.g., send `formData` to API
     console.log("Form submitted with data:", formData);
+    try {
+      const res = await registerUser({
+        _id: "",
+        username: formData.username,
+        email: formData.email,
+        year: formData.year,
+        role: "user",
+        geekCoins: 0,
+        section: formData.section,
+      });
+
+      if (res.data) {
+        console.log("User registered successfully", res.data);
+        // Redirect to a protected page (like a quiz)
+        window.location.href = "/quiz";
+      } else {
+        console.log("User registration failed", res.error);
+      }
+    } catch (error) {
+      console.error("User registration failed:", error);
+    }
   };
 
   return (
@@ -120,8 +139,6 @@ const Register: React.FC = () => {
                       id="terms"
                       name="terms"
                       type="checkbox"
-                      checked={formData.terms}
-                      onChange={handleChange}
                       className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                       required
                     />
