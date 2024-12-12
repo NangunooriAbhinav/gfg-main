@@ -29,7 +29,7 @@
     title: string;
     icon: string;
     iconbg: string;
-    questions?: { question: string; options: String[]; answer: string }[];
+    questions?: { question: string; options: string[]; answer: string }[];
   };
   
   export type Quizzes = Quiz[];
@@ -39,6 +39,7 @@
     userId: string;   // ID of the user who submitted the response
     score: number;    // Score obtained in the quiz
     quizId: string;   // ID of the associated quiz
+    userName: string; // Name of the user who submitted the
   }
   
   export interface Jwtpayload {

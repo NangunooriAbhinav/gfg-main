@@ -19,6 +19,7 @@ const Login = () => {
 
     try {
       const res = await loginUser({ email: email });
+      console.log("OTP sent successfully", res.data);
       setIsOtpSent(true);
       console.log("OTP sent to email:", email);
     } catch (error) {
@@ -109,7 +110,7 @@ const Login = () => {
               </form>
               <div className="flex justify-center mt-4">
                 <p className="text-sm text-gray-500">
-                  Don't have an account?{" "}
+                  Don{"'"}t have an account?{" "}
                   <button
                     className="text-primary-600 hover:underline"
                     onClick={() => {

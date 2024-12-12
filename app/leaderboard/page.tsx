@@ -1,6 +1,6 @@
 "use client";
 import { getResponses } from "@/lib/frontend_functions";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
 // Define a type for user data
 type UserScore = {

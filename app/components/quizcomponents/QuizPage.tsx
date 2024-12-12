@@ -1,9 +1,8 @@
 import { Jwtpayload, Quiz, User } from "@/types";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ScorePage from "./ScorePage";
 import { jwtDecode } from "jwt-decode";
 import { createResponse, getUserDetails } from "@/lib/frontend_functions";
-import { get } from "https";
 
 type QuizPageProps = {
   quizData: Quiz;
@@ -13,15 +12,15 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
   const [question, setQuestion] = useState<number>(0);
   const [progressBar, setProgressBar] = useState<number>(0);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const [selectedAnswer, setSelectedAnswer] = useState<String | undefined>("");
+  const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>("");
   const [score, setScore] = useState<number>(0);
   const [showNextQuestion, setShowNextQuestion] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [uid, setUid] = useState<string>("");
   const [user, setUser] = useState<User>();
 
-  let currentQuestion = quizData.questions && quizData.questions[question];
-  let numberOfQuestions = quizData.questions?.length;
+  const currentQuestion = quizData.questions && quizData.questions[question];
+  const numberOfQuestions = quizData.questions?.length;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -67,7 +66,7 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
           userId: uid,
           score: score,
           quizId: quizData.id,
-          userName: user?.username,
+          userName: user?.username || "",
         },
         localStorage.getItem("token") || ""
       );
@@ -99,7 +98,7 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
     }
   };
 
-  const handleSelectedAnswer = (answer: String | undefined) => {
+  const handleSelectedAnswer = (answer: string | undefined) => {
     setSelectedAnswer(answer);
   };
 
@@ -146,7 +145,6 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
               {currentQuestion?.options.map((option, index) => {
                 const letter = String.fromCharCode(65 + index); // 65 is the ASCII value for 'A'
                 const isSelected = selectedAnswer === option;
-                const isCorrect = currentQuestion?.answer === option;
                 const bgColor = isSelected
                   ? "text-white bg-primary-50 dark:bg-primary-50"
                   : "bg-grey text-grey";

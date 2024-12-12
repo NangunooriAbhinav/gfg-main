@@ -1,7 +1,6 @@
 "use client";
 import Home from "@/app/components/quizcomponents/Home";
-import { useState, useEffect, use } from "react";
-import data from "@/data.json";
+import { useState, useEffect } from "react";
 import { Quizzes, Quiz } from "@/types";
 import QuizPage from "../components/quizcomponents/QuizPage";
 import ProtectedRoute from "../protected";

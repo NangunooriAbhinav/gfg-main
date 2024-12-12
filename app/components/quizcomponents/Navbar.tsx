@@ -1,5 +1,3 @@
-import { Quiz } from "@/types";
-
 import { useEffect } from "react";
 
 type NavbarProps = {

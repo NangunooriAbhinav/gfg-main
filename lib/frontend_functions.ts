@@ -1,5 +1,5 @@
 import { config } from "@/config";
-import { CoinExchange, LoginRequest, OTPRequest, User } from "@/types";
+import { CoinExchange, LoginRequest, OTPRequest, QuizResponse, User } from "@/types";
 import axios from "axios";
 
 
@@ -91,7 +91,7 @@ export const getQuestions = async (jwt: string) => {
     }
   };
 
-export const createResponse = async (response : any, jwt: string) =>{
+export const createResponse = async (response : QuizResponse, jwt: string) =>{
     try{
         const url = `${config.api_url}/${config.v}/response/create`;
 
