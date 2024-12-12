@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import data from "@/data.json";
 import { Quizzes, Quiz } from "@/types";
 import QuizPage from "../components/quizcomponents/QuizPage";
+import ProtectedRoute from "../protected";
 
 function App() {
   const quizzes: Quizzes = data.quizzes;
@@ -46,17 +47,19 @@ function App() {
 
   return (
     <>
-      <div className="h-[90vh] flex items-center">
-        {toggle ? (
-          <Home
-            quizzes={quizzes}
-            setQuizData={setQuizData}
-            settoggle={setToggle}
-          />
-        ) : (
-          <QuizPage quizData={quizData} />
-        )}
-      </div>
+      <ProtectedRoute>
+        <div className="h-[90vh] flex items-center">
+          {toggle ? (
+            <Home
+              quizzes={quizzes}
+              setQuizData={setQuizData}
+              settoggle={setToggle}
+            />
+          ) : (
+            <QuizPage quizData={quizData} />
+          )}
+        </div>
+      </ProtectedRoute>
     </>
   );
 }

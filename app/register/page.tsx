@@ -1,6 +1,37 @@
-import React from "react";
+"use client";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-const Register = () => {
+interface FormData {
+  username: string;
+  email: string;
+  year: string;
+  section: string;
+  terms: boolean;
+}
+
+const Register: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    username: "",
+    email: "",
+    year: "",
+    section: "",
+    terms: false,
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // Perform form submission logic, e.g., send `formData` to API
+    console.log("Form submitted with data:", formData);
+  };
+
   return (
     <div>
       <section className="bg-gray-50 dark:bg-gray-900">
@@ -10,10 +41,10 @@ const Register = () => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Create an account
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label
-                    htmlFor="email"
+                    htmlFor="username"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Your Username
@@ -22,12 +53,13 @@ const Register = () => {
                     type="text"
                     name="username"
                     id="username"
+                    value={formData.username}
+                    onChange={handleChange}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@company.com"
-                    required=""
+                    placeholder="Enter your username"
+                    required
                   />
                 </div>
-
                 <div>
                   <label
                     htmlFor="email"
@@ -39,30 +71,16 @@ const Register = () => {
                     type="email"
                     name="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required=""
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="confirm-password"
+                    htmlFor="year"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Year
@@ -71,14 +89,16 @@ const Register = () => {
                     type="number"
                     name="year"
                     id="year"
-                    placeholder="enter your year of study"
+                    value={formData.year}
+                    onChange={handleChange}
+                    placeholder="Enter your year of study"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor="confirm-password"
+                    htmlFor="section"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Section
@@ -87,19 +107,23 @@ const Register = () => {
                     type="text"
                     name="section"
                     id="section"
-                    placeholder="enter your year of study"
+                    value={formData.section}
+                    onChange={handleChange}
+                    placeholder="Enter your section"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required=""
+                    required
                   />
                 </div>
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
                     <input
                       id="terms"
-                      aria-describedby="terms"
+                      name="terms"
                       type="checkbox"
+                      checked={formData.terms}
+                      onChange={handleChange}
                       className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                      required=""
+                      required
                     />
                   </div>
                   <div className="ml-3 text-sm">

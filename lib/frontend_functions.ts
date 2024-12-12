@@ -1,7 +1,6 @@
 import { config } from "@/config";
-import { CoinExchange, OTPRequest, User } from "@/types";
+import { CoinExchange, LoginRequest, OTPRequest, User } from "@/types";
 import axios from "axios";
-import { error } from "console";
 
 
 export const registerUser = async (user : User) =>{
@@ -17,11 +16,11 @@ export const registerUser = async (user : User) =>{
         );
         return {data: data, error: null}
     }catch{
-        return {data: null, error: error}
+        return {data: null, error: "error"}
     }
 }
 
-export const loginUser = async (email : string) =>{
+export const loginUser = async (email : LoginRequest) =>{
     try{
         const {data} = await axios.post(
             `${config.api_url}/${config.v}/auth/login`,
@@ -34,7 +33,7 @@ export const loginUser = async (email : string) =>{
         );
         return {data: data, error: null}
     }catch{
-        return {data: null, error: error}
+        return {data: null, error: "error"}
     }
 }
 
@@ -51,7 +50,7 @@ export const verifyOtp = async (otp : OTPRequest) =>{
         );
         return {data: data, error: null}
     }catch{
-        return {data: null, error: error}
+        return {data: null, error: "error"}
     }
 }
 
@@ -68,6 +67,38 @@ export const exchangeCoins = async (coinExchange : CoinExchange) =>{
         );
         return {data: data, error: null}
     }catch{
-        return {data: null, error: error}
+        return {data: null, error: "error"}
+    }
+}
+
+export const getQuestions = async () => {
+    try{
+        const {data} = await axios.get(
+            `${config.api_url}/${config.v}/quiz/all`,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }
+        );
+        return {data: data, error: null}
+    }catch{
+        return {data: null, error: "error"}
+    }
+}
+
+export const getResponses = async () => {
+    try{
+        const {data} = await axios.get(
+            `${config.api_url}/${config.v}/response/all`,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }
+        );
+        return {data: data, error: null}
+    }catch{
+        return {data: null, error: "error"}
     }
 }
