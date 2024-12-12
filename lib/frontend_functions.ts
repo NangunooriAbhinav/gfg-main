@@ -112,13 +112,30 @@ export const createResponse = async (response : any, jwt: string) =>{
     }
 }
   
-export const getResponses = async () => {
+export const getResponses = async (jwt : string) => {
     try{
         const {data} = await axios.get(
             `${config.api_url}/${config.v}/response/all`,
             {
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Bearer ${jwt}`
+                }
+            }
+        );
+        return {data: data, error: null}
+    }catch{
+        return {data: null, error: "error"}
+    }
+}
+
+export const getUserDetails = async (userId : string) => {
+    try{
+        const {data} = await axios.get(
+            `${config.api_url}/${config.v}/users/${userId}`,
+            {
+                headers: {
+                    "Content-Type": "application/json"
                 }
             }
         );

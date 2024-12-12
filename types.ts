@@ -3,10 +3,8 @@
     _id?: string;
     username: string;
     email: string;
-    passwordHash: string;
     geekCoins: number;
     role: string;
-    createdAt: Date;
     year: string;
     section: string;
   }

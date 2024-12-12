@@ -1,8 +1,8 @@
-import { Jwtpayload, Quiz } from "@/types";
+import { Jwtpayload, Quiz, User } from "@/types";
 import { use, useEffect, useState } from "react";
 import ScorePage from "./ScorePage";
 import { jwtDecode } from "jwt-decode";
-import { createResponse } from "@/lib/frontend_functions";
+import { createResponse, getUserDetails } from "@/lib/frontend_functions";
 
 type QuizPageProps = {
   quizData: Quiz;
@@ -17,6 +17,7 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
   const [showNextQuestion, setShowNextQuestion] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [uid, setUid] = useState<string>("");
+  const [user, setUser] = useState<User>();
 
   let currentQuestion = quizData.questions && quizData.questions[question];
   let numberOfQuestions = quizData.questions?.length;
@@ -41,7 +42,19 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
     }
   };
 
+  const getUser = async (userId: string) => {
+    try {
+      const response = await getUserDetails(userId);
+      console.log(response);
+      setUser(response.data.data);
+    } catch (error) {
+      console.error("Failed to fetch user details:", error);
+    }
+  };
+
   const submitQuiz = async () => {
+    await getUser(uid);
+    console.log(user);
     try {
       const response = await createResponse(
         {
@@ -49,6 +62,7 @@ const QuizPage = ({ quizData }: QuizPageProps) => {
           userId: uid,
           score: score,
           quizId: quizData.id,
+          userName: user?.username,
         },
         localStorage.getItem("token") || ""
       );
