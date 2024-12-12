@@ -46,19 +46,17 @@ function App() {
 
   return (
     <>
-      <Navbar
-        themeMode={themeMode}
-        setThemeMode={setThemeMode}
-        handleThemeMode={handleThemeMode}
-        title={quizData.title}
-        icon={quizData.icon}
-        iconbg={quizData.iconbg}
-      />
-      {toggle ? (
-        <Home quizzes={quizzes} setQuizData={setQuizData} settoggle={setToggle} />
-      ) : (
-        <QuizPage quizData={quizData} />
-      )}
+      <div className="h-[90vh] flex items-center">
+        {toggle ? (
+          <Home
+            quizzes={quizzes}
+            setQuizData={setQuizData}
+            settoggle={setToggle}
+          />
+        ) : (
+          <QuizPage quizData={quizData} />
+        )}
+      </div>
     </>
   );
 }

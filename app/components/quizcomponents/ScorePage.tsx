@@ -14,8 +14,8 @@ const ScorePage = ({
   numberOfQuestions,
 }: ScorePageProps) => {
   return (
-    <section className="mt-8 px-6 sm:px-16 xl:mt-0 xl:flex xl:px-0">
-      <div className="xl:w-1/2">
+    <section className="mt-8 px-6 sm:px-16 w-full xl:px-0 flex justify-around">
+      <div className="flex flex-col justify-center">
         <h2 className="text-[40px] font-extralight leading-none sm:text-[64px]">
           Quiz completed
         </h2>
@@ -23,8 +23,8 @@ const ScorePage = ({
           You scored...
         </h3>
       </div>
-      <div className="xl:w-1/2 xl:space-y-8">
-        <section className="mb-3 mt-10 flex flex-col items-center rounded-xl bg-white p-8 drop-shadow-sm dark:bg-navy sm:p-12 xl:mb-0 xl:mt-0 xl:w-[564px]">
+      <div className="flex flex-col gap-2">
+        <section className="mb-3 mt-10 flex flex-col items-center rounded-xl bg-white p-8 drop-shadow-md sm:p-12 xl:mb-0 xl:mt-0 xl:w-[564px]">
           <div className="flex h-[72px] items-center justify-center">
             <div className="flex items-center justify-center gap-4">
               <div
@@ -44,17 +44,17 @@ const ScorePage = ({
           </div>
           <div className="flex flex-col items-center">
             <h4 className="text-[88px] font-medium sm:text-[144px]">{score}</h4>
-            <h5 className="text-lg font-light dark:text-lightBluish sm:text-2xl">
+            <h5 className="text-lg font-light dark:text-primary-50 sm:text-2xl">
               out of {numberOfQuestions}
             </h5>
           </div>
         </section>
-        <button
+        {/* <button
           className="hover:bg-btnHover h-14 w-full rounded-xl bg-purple py-2 text-[18px] font-medium text-white transition-all duration-200 ease-in-out sm:h-[92px] sm:rounded-3xl sm:text-[28px] xl:w-[564px]"
           onClick={() => (window.location.href = "/")}
         >
           Play Again
-        </button>
+        </button> */}
       </div>
     </section>
   );
